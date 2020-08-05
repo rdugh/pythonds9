@@ -59,7 +59,9 @@ def viz_tree(r):
         current_node = r
     elif isinstance(r, BinarySearchTree):
         current_node = r.root  # root is a TreeNode object!
-        
+    else: 
+        print(f"I got an unexpected object of type {type(r)}, expected {BinaryTree} or {BinarySearchTree}")
+        return
     leftward = True
     current_root_num = 0
 
